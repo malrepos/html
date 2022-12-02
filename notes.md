@@ -173,3 +173,98 @@ miles).
 - width and height set the size of the video in the browser
 - controls attribute instructs the browser to include video controls
 - the text is displayed if the video fails to load
+
+---
+
+- we can let web browsers know we are using HTML:
+
+```
+<!DOCTYPE html>
+```
+
+- now we add opening and closing html tags so that anything inside will be interpreted as HTML code
+
+```
+<html>
+
+</html>
+```
+
+### head element
+
+- goes above the body
+- contains metadata for a web page
+
+```
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+```
+
+- inside the <head> we have <title>
+
+### Links to Other Web Pages
+
+- we use an ancor element <a>
+- we put the text of the link inside the opening and closing tags
+- we also add a href for the link address
+
+```
+<a href="https://www.wikipedia.org/">This Is A Link To Wikipedia</a>
+```
+
+- we can open links in new windows using the target attribute
+- to open in a new window target needs a value of "\_blank"
+
+```
+<a href="https://en.wikipedia.org/wiki/Brown_bear" target="_blank">The Brown Bear</a>
+```
+
+#### Linking to Internal Pages
+
+- if files are stored in the same folder we can link web pages together using a relative path
+
+```
+<a href="./contact.html">Contact</a>
+```
+
+#### Using Images as Anchors for Links
+
+- we can also turn images into links by wrapping it in a <a> anchor
+
+```
+<a href="https://en.wikipedia.org/wiki/Opuntia" target="_blank"><img src="https://www.Prickly_Pear_Closeup.jpg" alt="A red prickly pear fruit"/></a>
+```
+
+#### Linking to the Same Page
+
+- in order to link to a target on the smae page, we must give the target an id
+
+```
+<p id="top">This is the top of the page!</p>
+<h1 id="bottom">This is the bottom! </h1>
+```
+
+- an id can be added to most elements on a page
+- the target link is a string containing a # and then the target id
+
+```
+<ol>
+  <li><a href="#top">Top</a></li>
+  <li><a href="#bottom">Bottom</a></li>
+</ol>
+```
+
+### Whitespace
+
+- the browser ignores whitespace in a html file
+- so we can use whitespace to make the html code easier to read
+
+### Comments
+
+- comments begin with <!-- and end with -->
+
+```
+<!-- This is a comment that the browser will not display. -->
+```
