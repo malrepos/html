@@ -268,3 +268,120 @@ miles).
 ```
 <!-- This is a comment that the browser will not display. -->
 ```
+
+---
+
+# HTML Tables
+
+### Create a Table
+
+- before dispalying data we must first create the table
+
+```
+<table>
+</table>
+```
+
+### Table Rows
+
+- the first step is creating rows with the table rows element: <tr></tr>
+- here we add 2 rows
+
+```
+<table>
+<tr>
+</tr>
+<tr>
+</tr>
+</table>
+```
+
+### Table Data
+
+- each cell must also be defined to add data to it
+- we use the table data element: <td>
+
+```
+<table>
+  <tr>
+    <td>Go fuck yourself</td>
+    <td>Or whatever</td>
+  </tr>
+</table>
+```
+
+- the display of this table would show 1 row and 2 columns
+
+### Table Headings
+
+- to add titles to rows and columns we use the table heading element: <th>
+- it must be placed within a table row
+
+```
+<table>
+  <tr>
+    <th></th>
+    <th scope="col">Saturday</th>
+    <th scope="col">Sunday</th>
+  </tr>
+  <tr>
+    <th scope="row">Temperature</th>
+    <td>73</td>
+    <td>81</td>
+  </tr>
+</table>
+```
+
+- the above code creates 2 column headings
+- it uses an empty heading so that the headings align over the column
+- a row heading was created
+- the scope="" attribute dictates whether it is a row or col heading
+
+### Table Borders
+
+- we use CSS to add style to our tables
+
+### Spanning Columns
+
+- if data spans multiple columns, for example you have 2 columns Monday, Tuesday and the data holiday spans both
+- we use the "colspan" attribute in the table data <td> opening and define how many columns to span
+
+```
+<table>
+  <tr>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+  </tr>
+  <tr>
+    <td colspan="2">Out of Town</td>
+    <td>Back in Town</td>
+  </tr>
+</table>
+```
+
+### Spanning Rows
+
+- data can also span multiple rows
+- the rowspan attribute
+
+```
+<td rowspan="3">Blah</td>
+```
+
+- perhaps an event goes on for multiple hours
+
+### Table Body
+
+- when a table gets long we can section off all of the table data using
+- <tbody></tbody>
+- this excludes the table headings
+
+### Table Head
+
+- we section off the table's head using <thead></thead>
+
+### Table Footer
+
+- footers are often used to contain sums, differences, or other results
+- <tfoot></tfoot>
