@@ -385,3 +385,199 @@ miles).
 
 - footers are often used to contain sums, differences, or other results
 - <tfoot></tfoot>
+
+# Form Validation
+
+### Requiring an Input
+
+- when fields in our forms are not optional
+- require attribute
+
+```
+<input id="allergies" name="allergies" type="text" required>
+```
+
+### Set A Minimum or Maximum
+
+- we can assign a minimum or maximum value for a number field
+
+```
+<input id="guests" name="guests" type="number" min="1" max="4">
+```
+
+### Checking Text Length
+
+- to set a minimum or max number of characters for a text field
+- minlength or maxlength
+
+```
+<input id="summary" name="summary" type="text" minlength="5" maxlength="250" required>
+```
+
+### Matching A pattern
+
+- when we want a user input to follow specific guidleines
+- pattern attribute and assign it a regular expression
+
+```
+<input id="payment" name="payment" type="text" required pattern="[0-9]{14,16}">
+```
+
+- this will check the user entered only numbers, and that it is >=14 <= 16 numbers>
+- [a-zA-z0-9]+ will have only letters lower and upper and numbers
+- the + sign means 1 or more times, so the character can be repeated
+
+# Semantic HTML
+
+- semantic = "relating to meaning"
+- semantic elements provide info about the content between the opening and closing tags
+- so we select HTML elements based on their meaning, not on how they're presented
+- For example, by using the <header> element we provide info on what is in the tag
+
+### Header and Nav
+
+- a <header> is a container usually for navigational links
+- or intoductory content <h1> to <h6>
+
+- a <nav> is used to define a block of navigation links such as menus
+- a <nav> can be used inside of the header
+
+```
+<header>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+</header>
+```
+
+### Main and Footer
+
+- <main> is used to encapsulate the dominant content within a webpage
+- this is the buld of the page content
+
+```
+<main>
+  <header>
+    <h1>Types of Sports</h1>
+  </header>
+  <article>
+    <h3>Baseball</h3>
+    <p>
+      The first game of baseball was played in Cooperstown, New York in the summer of 1839.
+    </p>
+  </article>
+</main>
+```
+
+- <footer> contains info such as:
+  Contact information
+  Copyright information
+  Terms of use
+  Site Map
+  Reference to top of page links
+
+```
+<footer>
+  <p>Email me at Codey@Codecademy.com</p>
+</footer>
+```
+
+### Article and Section
+
+- <section> defines elements in a document, such as chapters, headings, areas of the document with the same theme
+
+```
+<section>
+  <h2>Fun Facts About Cricket</h2>
+</section>
+```
+
+- the <article> element holds content that makes sense on its own
+
+```
+<section>
+  <h2>Fun Facts About Cricket</h2>
+  <article>
+    <p>A single match of cricket can last up to 5 days.</p>
+  </article>
+</section>
+```
+
+### Aside
+
+- <aside> is used to mark additional info that can enhance another element but isn't required to understand the main content
+- commonly used for:
+  - Bibliographies
+  - Endnotes
+  - Comments
+  - Pull quotes
+  - Editorial sidebars
+  - Additional information
+
+```
+<article>
+  <p>The first World Series was played between Pittsburgh and Boston in 1903 and was a nine-game series.</p>
+</article>
+<aside>
+  <p>
+   Babe Ruth once stated, “Heroes get remembered, but legends never die.”
+  </p>
+</aside>
+```
+
+### Figure and Figcaption
+
+- <figure> is an element used to encapsulate media such as an image, illustration, diagram, code snippet, etc, which is referenced in the main flow of the document.
+
+```
+<figure>
+  <img src="overwatch.jpg">
+</figure>
+```
+
+- <figcaption> is an element used to describe the media in the <figure> tag. Usually, <figcaption> will go inside <figure>
+
+```
+<figure>
+  <img src="overwatch.jpg">
+  <figcaption>This picture shows characters from Overwatch.</figcaption>
+</figure>
+```
+
+### Audio and Attributes
+
+- <audio> element is used to embed audio content into a document. Like <video>, <audio> uses src to link the audio source.
+
+```
+<audio>
+  <source src="iAmAnAudioFile.mp3" type="audio/mp3">
+</audio>
+```
+
+- Although not always necessary, it’s recommended that we state the type of audio as it helps the browser identify it more easily and determine if that type of audio file is supported by the browser.
+
+- Attributes provide additional information about an element.
+- There are many attributes for <audio>
+- controls: automatically displays the audio controls into the browser such as play and mute.
+
+```
+<audio autoplay controls>
+```
+
+### Video and Embed
+
+- <video> element makes it clear that a developer is attempting to display a video to the user.
+- some attributes:
+  - controls: When added in, a play/pause button will be added onto the video along with volume control and a fullscreen option.
+  - autoplay: The attribute which results in a video automatically playing as soon as the page is loaded.
+  - loop: This attribute results in the video continuously playing on repeat.
+
+```
+  <video src="coding.mp4" controls>Video not supported</video>
+```
+
+- <embed> tag, which can embed any media content including videos, audio files, and gifs from an external source
+- <embed> is a deprecated tag
